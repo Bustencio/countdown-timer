@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+html {
+    font-family: Menlo;
+}
+
+span{
+    text-align: center;
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+#tabs{
+    text-align: center;
+    width: 100%;
+}
+
+#tabs .btn{
+    margin: 0px;
+    margin-bottom: -1px;
+    font-size: 0.9vw;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    border: 1px;
+    border-color: black;
+    border-style: solid ;
+    z-index: 5;
+}
+
+#tabs .active {
+    color: black;
+    background-color: whitesmoke;
+    border-bottom: none;
+    margin-bottom: -3px;
+    outline: whitesmoke solid 0px;
+    position: relative;
+}
+
+#tabs .btn:hover {
+    color: black;
+    background-color: whitesmoke;
+    border-bottom: none;
+    margin-bottom: -3px;
+    outline: whitesmoke solid 0px;
+    position: relative;
+}
+
+#watch-1{
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+#watch-2{
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+#watch-3{
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+#watch-4{
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+#watch-5{
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+#watch-6{
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+
+i{
+    float: left;
+    margin-top: 15px;
+    padding: 2px;
+    color: black;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+
+
+.controls {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.btn {
+    color: black;
+    background-color: lightgray;
+    font-size: 20px;
+    margin: 8px;
+    
+}
+
+h2{
+    text-align: center;
+    margin-top: 5px;
+
+}
+
+button:first-child {
+    margin-left: 0;
+}
+
+button:last-child {
+    margin-right: 0;
+}
+
+.controls .btn:hover {
+    color: black;
+    background-color: lightgray;
+    box-shadow: 5px 5px 10px darkgray;
+}
+
+.stopwatch {
+    font-size: 6vw;
+    text-align: center;
+}
+
+.stopwatch-2{
+    font-size: 6vw;
+    text-align: center;
+}

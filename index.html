@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>StopWatch</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav class="navbar navbar-light">
+        <span class="navbar-brand navbar-center mb-0"><h3>Cronómetro debate</h3></span>
+    </nav>
+
+    <div class="row">
+        <div class="col-8 offset-2" id="tabs">
+            <button class="btn btn-outline-light btnTab active" onclick="switchTabs('tab1', this)"> Exposición Inicial </button>
+            <button class="btn btn-outline-light btnTab" onclick="switchTabs('tab2', this)"> Refutación 1 </button>
+            <button class="btn btn-outline-light btnTab" onclick="switchTabs('tab3', this)"> Refutación 2 </button>
+            <button class="btn btn-outline-light btnTab" onclick="switchTabs('tab4', this)"> Conclusión </button>
+            <button class="btn btn-outline-light btnTab" onclick="switchTabs('tab5', this)"> Resumen de tiempos </button>
+
+        </div>
+    </div>
+    <div class="container" id="tab1">
+        <div class="row">
+            <div class="col-8 offset-2" id="watch-1">
+                <a href="#" onclick="showClock(this)" id="downArrow1" style="display: none;"><i class="fa fa-chevron-down"></i></a>
+                <a href="#" onclick="hideClock(this)" id="upArrow1"><i class="fa fa-chevron-up"></i></a>
+                <h2>EXPOSICIÓN INICIAL / A FAVOR</h2>
+                <div class="stopwatch" id="stopwatch1">00:00</div>
+                <div class="controls" id="controls1">
+                    <button class="btn btn-light" onclick="stopwatch.start()"> Iniciar </button>
+                    <button class="btn btn-light" onclick="stopwatch.stop()"> Pausar </button>
+                    <button class="btn btn-light" onclick="stopwatch.reset()"> Reiniciar </button>
+                    <button class="btn btn-light" onclick="stopwatch.setTime()"> Fijar tiempo </button>
+                </div> 
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 offset-2" id="watch-2">
+                <a href="#" onclick="showClock2(this)" id="downArrow2" style="display: none;"><i class="fa fa-chevron-down"></i></a>
+                <a href="#" onclick="hideClock2(this)" id="upArrow2"><i class="fa fa-chevron-up"></i></a>
+                <h2>EXPOSICIÓN INICIAL / EN CONTRA</h2>
+                <div class="stopwatch" id="stopwatch2">00:00</div>
+                <div class="controls" id="controls2">
+                    <button class="btn btn-light" onclick="stopwatch2.start()"> Iniciar </button>
+                    <button class="btn btn-light" onclick="stopwatch2.stop()"> Pausar </button>
+                    <button class="btn btn-light" onclick="stopwatch2.reset()"> Reiniciar </button>
+                    <button class="btn btn-light" onclick="stopwatch2.setTime()"> Fijar tiempo </button>
+                </div> 
+                
+            </div>
+        </div>
+    </div>
+    <div class="container" id="tab2" style="display: none;">
+        <div class="row">
+            <div class="col-8 offset-2" id="watch-3">
+                <a href="#" onclick="showClock(this)" id="downArrow3" style="display: none;"><i class="fa fa-chevron-down"></i></a>
+                <a href="#" onclick="hideClock(this)" id="upArrow3"><i class="fa fa-chevron-up"></i></a>
+                <h2>REFUTACIÓN 1 / A FAVOR</h2>
+                <div class="stopwatch" id="stopwatch3">00:00</div>
+                <div class="controls" id="controls3">
+                    <button class="btn btn-light" onclick="stopwatch3.start()"> Iniciar </button>
+                    <button class="btn btn-light" onclick="stopwatch3.stop()"> Pausar </button>
+                    <button class="btn btn-light" onclick="stopwatch3.reset()"> Reiniciar </button>
+                    <button class="btn btn-light" onclick="stopwatch3.setTime()"> Fijar tiempo </button>
+                </div> 
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 offset-2" id="watch-4">
+                <a href="#" onclick="showClock2(this)" id="downArrow4" style="display: none;"><i class="fa fa-chevron-down"></i></a>
+                <a href="#" onclick="hideClock2(this)" id="upArrow4"><i class="fa fa-chevron-up"></i></a>
+                <h2>REFUTACIÓN 1 / EN CONTRA</h2>
+                <div class="stopwatch" id="stopwatch4">00:00</div>
+                <div class="controls" id="controls4">
+                    <button class="btn btn-light" onclick="stopwatch4.start()"> Iniciar </button>
+                    <button class="btn btn-light" onclick="stopwatch4.stop()"> Pausar </button>
+                    <button class="btn btn-light" onclick="stopwatch4.reset()"> Reiniciar </button>
+                    <button class="btn btn-light" onclick="stopwatch4.setTime()"> Fijar tiempo </button>
+                </div> 
+                
+            </div>
+        </div>
+    </div>
+    <div class="container" id="tab3" style="display: none;">
+        <div class="row">
+            <div class="col-8 offset-2" id="watch-5">
+                <a href="#" onclick="showClock(this)" id="downArrow5" style="display: none;"><i class="fa fa-chevron-down"></i></a>
+                <a href="#" onclick="hideClock(this)" id="upArrow5"><i class="fa fa-chevron-up"></i></a>
+                <h2>REFUTACIÓN 2 / A FAVOR</h2>
+                <div class="stopwatch" id="stopwatch5">00:00</div>
+                <div class="controls" id="controls5">
+                    <button class="btn btn-light" onclick="stopwatch5.start()"> Iniciar </button>
+                    <button class="btn btn-light" onclick="stopwatch5.stop()"> Pausar </button>
+                    <button class="btn btn-light" onclick="stopwatch5.reset()"> Reiniciar </button>
+                    <button class="btn btn-light" onclick="stopwatch5.setTime()"> Fijar tiempo </button>
+                </div> 
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 offset-2" id="watch-6">
+                <a href="#" onclick="showClock2(this)" id="downArrow6" style="display: none;"><i class="fa fa-chevron-down"></i></a>
+                <a href="#" onclick="hideClock2(this)" id="upArrow6"><i class="fa fa-chevron-up"></i></a>
+                <h2>REFUTACIÓN 2 / EN CONTRA</h2>
+                <div class="stopwatch" id="stopwatch6">00:00</div>
+                <div class="controls" id="controls6">
+                    <button class="btn btn-light" onclick="stopwatch6.start()"> Iniciar </button>
+                    <button class="btn btn-light" onclick="stopwatch6.stop()"> Pausar </button>
+                    <button class="btn btn-light" onclick="stopwatch6.reset()"> Reiniciar </button>
+                    <button class="btn btn-light" onclick="stopwatch6.setTime()"> Fijar tiempo </button>
+                </div> 
+                
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <img src="./static/logoComplutense.png" class="center"> 
+        </div>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
+
