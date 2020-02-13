@@ -23,6 +23,7 @@ span{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    margin-top: 10px;
   }
 
 #tabs{
@@ -110,6 +111,38 @@ span{
     border-radius: 10px;
 }
 
+#watch-7{
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+#watch-8{
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+#timeAF{
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+#timeEC{
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+}
+
 
 i{
     float: left;
@@ -140,6 +173,14 @@ i{
 h2{
     text-align: center;
     margin-top: 5px;
+    font-size: 1.5vw;
+
+}
+
+h3{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 1vw;
 
 }
 
