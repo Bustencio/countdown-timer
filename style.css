@@ -49,7 +49,7 @@ span{
     color: black;
     background-color: whitesmoke;
     border-bottom: none;
-    margin-bottom: -3px;
+    margin-bottom: -2px;
     outline: whitesmoke solid 0px;
     position: relative;
 }
@@ -58,7 +58,7 @@ span{
     color: black;
     background-color: whitesmoke;
     border-bottom: none;
-    margin-bottom: -3px;
+    margin-bottom: -2px;
     outline: whitesmoke solid 0px;
     position: relative;
 }
@@ -177,10 +177,10 @@ h2{
 
 }
 
-h1{
+h3{
     text-align: center;
     margin-top: 5px;
-    font-size: 2vw;
+    font-size: 1vw;
 
 }
 
