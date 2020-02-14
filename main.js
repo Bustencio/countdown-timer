@@ -11,9 +11,9 @@ class Stopwatch {
     reset(resetTimes) {
         this.running = false;
         this.time = null;
-        this.times = resetTimes;
-        this.display.style.color = "block";   
-        this.print(this.times); 
+        this.times = resetTimes;  
+        this.print(this.times);
+        this.display.style.color = "black";  
     }
     
     start() {
@@ -44,7 +44,6 @@ class Stopwatch {
     
     calculate(timestamp) {
         var diff = timestamp - this.time;
-        console.log(timestamp -  this.time)
         // Hundredths of a second are 100 ms
         this.times[2] += diff / 10;
         // Seconds are 100 hundredths of a second
@@ -56,10 +55,12 @@ class Stopwatch {
         if (this.times[1] < 0 && this.times[0] > 0){
             this.times[0] -= 1;
             this.times[1] += 60;
-        } else if (this.times[1] == 0 && this.times[0] == 0){
-            this.stop();
+        } 
+        else if (this.times[1] == 0 && this.times[0] == 0){ // Time gets to 0 
             this.display.style.color = "red";   
-
+        }
+        else if (this.times[1] == -20 && this.times[0] == 0){ // Time gets to 0 
+            this.stop();  
         }
     }
     
@@ -68,9 +69,15 @@ class Stopwatch {
     }
     
     format(times) {
+        if(times[1]<0){
+            return `-\
+${pad0(times[0], 2)}:\
+${pad0(Math.abs(times[1]), 2)}`;
+        }else{
         return `\
 ${pad0(times[0], 2)}:\
 ${pad0(times[1], 2)}`;
+        }
     }
 }
 
